@@ -70,7 +70,7 @@ How to Run
 
 Open terminal inside project folder and run:
 
-python app.py
+python to_do_manager.py
 
 ---
 
