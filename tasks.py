@@ -21,6 +21,7 @@ def addtask():
             title=input("Enter the title of the task:")
             if(title.isspace()):
                 raise ValueError("Input is invalid")
+            break
         except ValueError as e:
             print(e)
             title.strip()
