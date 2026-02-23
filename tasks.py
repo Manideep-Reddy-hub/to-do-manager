@@ -16,10 +16,18 @@ def checker(data):
             print(e)
 def addtask():
     data=load_data()
-    title=input("Enter the title of the task:")
+    while True:
+        try:
+            title=input("Enter the title of the task:")
+            if(title.isspace()):
+                raise ValueError("Input is invalid")
+        except ValueError as e:
+            print(e)
+            title.strip()
     while True:
         try:
             status=input("Enter the status of the task(Pending or Done):").capitalize()
+            status.strip()
             if(status!="Pending" and status!="Done"):
                 raise RuntimeError("Invalid Status")
             break
