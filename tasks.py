@@ -24,7 +24,7 @@ def addtask():
             break
         except ValueError as e:
             print(e)
-            title.strip()
+        title.strip()
     while True:
         try:
             status=input("Enter the status of the task(Pending or Done):").capitalize()
